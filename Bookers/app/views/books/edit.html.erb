@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebCampBackendNew</title>
+    <link rel="stylesheet" media="all" href="/assets/application.css"/>
+  </head>
+
+  <body>
+    <h1>Editing Book</h1>
+	<%= form_for(@book) do |f| %>
+	<label>Title</label>
+  	<div class="field">
+		<%= f.text_field :title %>
+  	</div>
+    <label>Body</label>
+  	<div class="field">
+		<%= f.text_area :body %>
+  	</div>
+  	<div class="actions">
+    	<%= f.submit 'Update Book'%>
+  	</div>
+	<% end %>
+
+	<%= link_to 'Show', book_path(@book) %>
+	<a>|</a>
+	<%= link_to 'Back', books_path %>
+
+  </body>
+</html>
