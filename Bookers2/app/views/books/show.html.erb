@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebCampBackendNew</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/application.css"/>
+  </head>
+
+  <body>
+  	<% if flash[:notice] %>
+  	<p class="notice"><%= flash[:notice] %></p>
+  <% end %>
+
+	<p>
+	  <strong>Title:</strong>
+	  <%= @book.title %>
+	</p>
+
+	<p>
+	  <strong>Body:</strong>
+	  <%= @book.body %>
+	</p>
+
+	<%= link_to 'Edit', edit_book_path(@book) %>
+	<a>|</a>
+	<%= link_to 'Back', books_path %>
+  </body>
+</html>
